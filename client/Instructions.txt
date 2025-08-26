@@ -1,0 +1,604 @@
+
+
+SERVER
+=======
+# https://github.com/jlucaso1/whatsapp-mcp-ts
+
+Get code
+--------
+➜  git clone https://github.com/jlucaso1/whatsapp-mcp-ts
+➜  cd whatsapp-mcp-ts 
+➜  whatsapp-mcp-ts git:(main) pwd
+/Users/binu.b.varghese/source/agent/whatsapp/whatsapp-mcp-ts
+➜  whatsapp-mcp-ts git:(main) ✗ ls
+auth_info         mcp-logs.txt      README.md         wa-logs.txt
+data              node_modules      smithery.yaml
+Dockerfile        package-lock.json src
+mcp-example.json  package.json      tsconfig.json
+
+Test run the MCP Server
+-----------------------
+➜  whatsapp-mcp-ts git:(main) node src/main.ts
+(node:16987) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Logged as undefined
+...
+If not logged into WhatsApp server, It will show a QR code on the browser.
+WhatsApp->Settings->Scan QR Code->Link Devices
+At that point You will Connected to WhatsApp for a Session lasting several days
+After successful connect to WhatsApp, You will see the following on log as below..
+You do not need to link Devices until that connection time out which is several days
+... 
+Logged as Binu Varghese
+
+The server is currently on Stdio only.
+You can test the server with the Inspector py code listed below..
+If the server is not running, it will start auto within the code space of the client
+SERVER_ARGS = ["/Users/binu.b.varghese/source/agent/whatsapp/whatsapp-mcp-ts/src/main.ts"]  # your TypeScript server entry point
+Make sure the SERVER_ARGS is pointing to the server code main.ts
+Also I set the "nvm use 22" to make sure it uses the LTS of node.
+Use the nvm setting in server and client
+
+Then you can test the messaging as below..
+
+Plan to make it run on SSE and Web Streaming transport later..
+
+
+Client
+========
+
+(.venv) ➜  client git:(master) ✗ pwd
+/Users/binu.b.varghese/source/agent/whatsapp/client
+(.venv) ➜  client git:(master) ✗ uv sync
+
+(.venv) ➜  client git:(master) ✗ uv run client_stdio_toolcalls_interactive.py
+🔗 WhatsApp MCP Interactive Session
+==================================================
+(node:20370) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ Connected to server: whatsapp-baileys-ts
+  Version: 0.1.0
+  Protocol Version: 2024-11-05
+
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 1
+
+🔍 SEARCH CONTACTS
+------------------------------
+Enter search query (name/phone): Binu
+Searching for contacts matching 'Binu'...
+📊 Results:
+[
+  {
+    "jid": "1678XXXXXXXX@s.whatsapp.net",
+    "name": "Binu iPhone ACN"
+  },
+  {
+    "jid": "1678XXXXXXXX@s.whatsapp.net",
+    "name": "Jeen Binu"
+  }
+]
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 6
+
+📤 SEND MESSAGE
+------------------------------
+Enter recipient JID: 16783570553@s.whatsapp.net
+Enter message text: Test message from AI
+Send 'Test message from AI' to '1678XXXXXXXX@s.whatsapp.net'? (y/n): y
+Sending message...
+📊 Results:
+Message sent successfully to 1678XXXXXXXX@s.whatsapp.net (ID: 3EB0AAEA35A48EF9D6D30F).
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 1
+
+🔍 SEARCH CONTACTS
+------------------------------
+Enter search query (name/phone): Winnie
+Searching for contacts matching 'Winnie'...
+📊 Results:
+[
+  {
+    "jid": "1678XXXXXXXX@s.whatsapp.net",
+    "name": "Winnie iPhone"
+  }
+]
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 2
+
+💬 LIST CHATS
+------------------------------
+Enter limit (default 10):
+Enter page number (default 0):
+Sort by (last_active/name, default last_active):
+Filter by name/JID (optional):
+Fetching chats...
+📊 Results:
+[
+  {
+    "jid": "1678XXXXXXX1@s.whatsapp.net",
+    "name": "1678XXXXXXX1",
+    "is_group": false,
+    "last_message_time": null,
+    "last_message_preview": null,
+    "last_sender_jid": null,
+    "last_sender_display": null,
+    "last_is_from_me": null
+  },
+  {
+    "jid": "1678XXXXXXX2@s.whatsapp.net",
+    "name": "1678XXXXXXX2",
+    "is_group": false,
+    "last_message_time": null,
+    "last_message_preview": null,
+    "last_sender_jid": null,
+    "last_sender_display": null,
+    "last_is_from_me": null
+  },
+  {
+    "jid": "1678XXXXXXX3@s.whatsapp.net",
+    "name": "1678XXXXXXX3",
+    "is_group": false,
+    "last_message_time": null,
+    "last_message_preview": null,
+    "last_sender_jid": null,
+    "last_sender_display": null,
+    "last_is_from_me": null
+  },
+  ....
+  ....
+  ....
+]
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 3
+
+📄 GET CHAT DETAILS
+------------------------------
+Enter chat JID (e.g., '123456@s.whatsapp.net'): 1678XXXXXXXX@s.whatsapp.net
+Include last message? (y/n, default y): y
+Fetching details for chat '1678XXXXXXXX@s.whatsapp.net'...
+📊 Results:
+{
+  "jid": "16783570553@s.whatsapp.net",
+  "name": "FirstName\u200b LastName",
+  "is_group": false,
+  "last_message_time": "2025-08-26T21:06:39.000Z",
+  "last_message_preview": "Test message from AI",
+  "last_sender_jid": null,
+  "last_sender_display": "Me",
+  "last_is_from_me": true
+}
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 4
+
+📋 LIST MESSAGES FROM CHAT
+------------------------------
+Enter chat JID: 447424242163@s.whatsapp.net
+Enter limit (default 20):
+Enter page number (default 0):
+Fetching messages from '1678XXXXXXXX@s.whatsapp.net'...
+📊 Results:
+[
+  {
+    "id": "4CE6C55F1A4B1ECB43AF95AFEE6DEADA",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": null,
+    "sender_display": "Me",
+    "content": "Harry, Hope you are having fun at Madrid.",
+    "timestamp": "2025-08-26T18:59:17.526Z",
+    "is_from_me": true
+  },
+  {
+    "id": "BA96249C32A63C9F2EBA67931FFBC0C6",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "sender_display": "1678XXXXXXXX",
+    "content": "Thanks Binu for the wishes \ud83d\ude4f",
+    "timestamp": "2025-08-26T18:59:17.524Z",
+    "is_from_me": false
+  },
+  {
+    "id": "47D6B187DD3EE9B581C2B45638541F84",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "sender_display": "1678XXXXXXXX",
+    "content": "Hope you and familiy are doing well! \n\nAfter staying 2+ years in Spain, we are planning to going back to Dubai",
+    "timestamp": "2025-08-26T18:59:17.523Z",
+    "is_from_me": false
+  },
+  {
+    "id": "3227DBE419609EDA78526C4AACD06CDB",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": null,
+    "sender_display": "Me",
+    "content": "Doing good. Thanks. Dubai economy seems to be doing great.",
+    "timestamp": "2025-08-26T18:59:17.522Z",
+    "is_from_me": true
+  },
+  {
+    "id": "37091346455E260AFE4BCF7DA8789B3E",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "sender_display": "1678XXXXXXXX",
+    "content": "Also tax is much lower than UK",
+    "timestamp": "2025-08-26T18:59:10.011Z",
+    "is_from_me": false
+  }
+]
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 5
+
+🔎 SEARCH MESSAGES
+------------------------------
+Enter search query: Tax
+Enter chat JID (optional, press Enter for all chats): 447424242163@s.whatsapp.net
+Enter limit (default 10):
+Enter page number (default 0):
+Searching for 'Tax' in chat '447424242163@s.whatsapp.net'...
+📊 Results:
+[
+  {
+    "id": "37091346455E260AFE4BCF7DA8789B3E",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "sender_display": "1678XXXXXXXX",
+    "content": "Also tax is much lower than Spain",
+    "timestamp": "2025-08-26T18:59:10.011Z",
+    "is_from_me": false
+  }
+]
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 7
+
+🧵 GET MESSAGE CONTEXT
+------------------------------
+Enter message ID: 37091346455E260AFE4BCF7DA8789B3E
+Messages before (default 5):
+Messages after (default 5):
+Fetching context for message '37091346455E260AFE4BCF7DA8789B3E'...
+📊 Results:
+{
+  "target": {
+    "id": "37091346455E260AFE4BCF7DA8789B3E",
+    "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "chat_name": "Harry LastName",
+    "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+    "sender_display": "1678XXXXXXXX",
+    "content": "Also tax is much lower than Spain",
+    "timestamp": "2025-08-26T18:59:10.011Z",
+    "is_from_me": false
+  },
+  "before": [],
+  "after": [
+    {
+      "id": "3227DBE419609EDA78526C4AACD06CDB",
+      "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+      "chat_name": "Harry LastName",
+      "sender_jid": null,
+      "sender_display": "Me",
+      "content": "Doing good. Thanks. Dubai economy seems to be doing great.",
+      "timestamp": "2025-08-26T18:59:17.522Z",
+      "is_from_me": true
+    },
+    {
+      "id": "47D6B187DD3EE9B581C2B45638541F84",
+      "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+      "chat_name": "Harry LastName",
+      "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+      "sender_display": "1678XXXXXXXX",
+      "content": "Hope you, and family are doing well! \n\nAfter staying 2+ years in Spain, we are planning to going back to Dubai as it is closer to home country India also!",
+      "timestamp": "2025-08-26T18:59:17.523Z",
+      "is_from_me": false
+    },
+    {
+      "id": "BA96249C32A63C9F2EBA67931FFBC0C6",
+      "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+      "chat_name": "Harry LastName",
+      "sender_jid": "1678XXXXXXXX@s.whatsapp.net",
+      "sender_display": "1678XXXXXXXX",
+      "content": "Thanks Binu for the wishes \ud83d\ude4f",
+      "timestamp": "2025-08-26T18:59:17.524Z",
+      "is_from_me": false
+    },
+    {
+      "id": "4CE6C55F1A4B1ECB43AF95AFEE6DEADA",
+      "chat_jid": "1678XXXXXXXX@s.whatsapp.net",
+      "chat_name": "Harry LastName",
+      "sender_jid": null,
+      "sender_display": "Me",
+      "content": "Harry, Hope you are having fun at Madrid.",
+      "timestamp": "2025-08-26T18:59:17.526Z",
+      "is_from_me": true
+    }
+  ]
+}
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 8
+
+🗂️  GET DATABASE SCHEMA
+------------------------------
+Fetching database schema...
+📊 Results:
+meta=None contents=[TextResourceContents(
+    uri=AnyUrl('schema://whatsapp/main'), 
+    mimeType=None, meta=None, 
+    text='TABLE chats (jid TEXT PK, name TEXT, last_message_time TIMESTAMP)\n
+        TABLE messages (id TEXT, chat_jid TEXT, sender TEXT, content TEXT, timestamp TIMESTAMP, is_from_me BOOLEAN, PK(id, chat_jid), FK(chat_jid) REFERENCES chats(jid))')]
+
+==================================================
+📱 WhatsApp MCP Operations Menu:
+==================================================
+1. 🔍 Search contacts
+2. 💬 List chats
+3. 📄 Get chat details
+4. 📋 List messages from chat
+5. 🔎 Search messages
+6. 📤 Send message
+7. 🧵 Get message context
+8. 🗂️  Get database schema
+9. ❌ Exit
+==================================================
+
+Enter your choice (1-9): 9
+
+👋 Goodbye!
+
+
+(.venv) ➜  client git:(master) ✗ uv run client_stdio_inspect.py
+MCP Server API Inspector
+==================================================
+Connecting to server: node /Users/binu.b.varghese/source/agent/whatsapp/whatsapp-mcp-ts/src/main.ts
+
+(node:54205) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ Connected to server: whatsapp-baileys-ts
+  Version: 0.1.0
+  Protocol Version: 2024-11-05
+
+🔧 AVAILABLE TOOLS:
+==================================================
+1. search_contacts
+   Input Schema:
+      Type: object
+      Properties:
+        query:
+          Type: string
+          Description: Search term for contact name or phone number part of JID
+      Required: query
+
+2. list_messages
+   Input Schema:
+      Type: object
+      Properties:
+        chat_jid:
+          Type: string
+          Description: The JID of the chat (e.g., '123456@s.whatsapp.net' or 'group@g.us')
+        limit:
+          Type: integer
+          Description: Max messages per page (default 20)
+        page:
+          Type: integer
+          Description: Page number (0-indexed, default 0)
+      Required: chat_jid
+
+3. list_chats
+   Input Schema:
+      Type: object
+      Properties:
+        limit:
+          Type: integer
+          Description: Max chats per page (default 20)
+        page:
+          Type: integer
+          Description: Page number (0-indexed, default 0)
+        sort_by:
+          Type: string
+          Description: Sort order: 'last_active' (default) or 'name'
+        query:
+          Type: string
+          Description: Optional filter by chat name or JID
+        include_last_message:
+          Type: boolean
+          Description: Include last message details (default true)
+
+4. get_chat
+   Input Schema:
+      Type: object
+      Properties:
+        chat_jid:
+          Type: string
+          Description: The JID of the chat to retrieve
+        include_last_message:
+          Type: boolean
+          Description: Include last message details (default true)
+      Required: chat_jid
+
+5. get_message_context
+   Input Schema:
+      Type: object
+      Properties:
+        message_id:
+          Type: string
+          Description: The ID of the target message to get context around
+        before:
+          Type: integer
+          Description: Number of messages before (default 5)
+        after:
+          Type: integer
+          Description: Number of messages after (default 5)
+      Required: message_id
+
+6. send_message
+   Input Schema:
+      Type: object
+      Properties:
+        recipient:
+          Type: string
+          Description: Recipient JID (user or group, e.g., '12345@s.whatsapp.net' or 'group123@g.us')
+        message:
+          Type: string
+          Description: The text message to send
+      Required: recipient, message
+
+7. search_messages
+   Input Schema:
+      Type: object
+      Properties:
+        query:
+          Type: string
+          Description: The text content to search for within messages
+        chat_jid:
+          Type: string
+          Description: Optional: The JID of a specific chat to search within (e.g., '123...net' or 'group@g.us'). If omitted, searches all chats.
+        limit:
+          Type: integer
+          Description: Max messages per page (default 10)
+        page:
+          Type: integer
+          Description: Page number (0-indexed, default 0)
+      Required: query
+
+
+
+📁 AVAILABLE RESOURCES:
+==================================================
+1. schema://whatsapp/main
+   Name: db_schema
+
+
+
+✗ Error listing prompts: Method not found
+✗ Error connecting to server: unhandled errors in a TaskGroup (1 sub-exception)
+(

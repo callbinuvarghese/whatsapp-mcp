@@ -1,0 +1,87 @@
+{"level":30,"time":"2025-08-26T20:35:17.298Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Starting WhatsApp MCP Server..."}
+{"level":30,"time":"2025-08-26T20:35:17.299Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing database..."}
+{"level":30,"time":"2025-08-26T20:35:17.339Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Database initialized successfully."}
+{"level":30,"time":"2025-08-26T20:35:17.339Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Attempting to connect to WhatsApp..."}
+{"level":30,"time":"2025-08-26T20:35:17.779Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"WhatsApp connection process initiated."}
+{"level":30,"time":"2025-08-26T20:35:17.779Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Starting MCP server..."}
+{"level":30,"time":"2025-08-26T20:35:17.780Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing MCP server..."}
+{"level":30,"time":"2025-08-26T20:35:17.783Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"MCP server configured. Connecting stdio transport..."}
+{"level":30,"time":"2025-08-26T20:35:17.783Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"MCP transport connected. Server is ready and listening via stdio."}
+{"level":30,"time":"2025-08-26T20:35:17.784Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server setup complete. Waiting for requests from client..."}
+{"level":30,"time":"2025-08-26T20:35:17.784Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server started and listening."}
+{"level":30,"time":"2025-08-26T20:35:17.784Z","pid":3016,"hostname":"AMAC02CV6B6MD6R","msg":"Application setup complete. Running..."}
+{"level":30,"time":"2025-08-26T20:50:20.016Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Starting WhatsApp MCP Server..."}
+{"level":30,"time":"2025-08-26T20:50:20.017Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing database..."}
+{"level":30,"time":"2025-08-26T20:50:20.039Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Database initialized successfully."}
+{"level":30,"time":"2025-08-26T20:50:20.039Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Attempting to connect to WhatsApp..."}
+{"level":30,"time":"2025-08-26T20:50:20.479Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"WhatsApp connection process initiated."}
+{"level":30,"time":"2025-08-26T20:50:20.479Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Starting MCP server..."}
+{"level":30,"time":"2025-08-26T20:50:20.480Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing MCP server..."}
+{"level":30,"time":"2025-08-26T20:50:20.485Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"MCP server configured. Connecting stdio transport..."}
+{"level":30,"time":"2025-08-26T20:50:20.486Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"MCP transport connected. Server is ready and listening via stdio."}
+{"level":30,"time":"2025-08-26T20:50:20.486Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server setup complete. Waiting for requests from client..."}
+{"level":30,"time":"2025-08-26T20:50:20.486Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server started and listening."}
+{"level":30,"time":"2025-08-26T20:50:20.486Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"Application setup complete. Running..."}
+{"level":30,"time":"2025-08-26T20:50:33.943Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing search_contacts with query: \"Winnie\""}
+{"level":30,"time":"2025-08-26T20:51:10.787Z","pid":11468,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing list_chats: limit=10, page=1, sort=last_active, query=undefined, lastMsg=true"}
+{"level":30,"time":"2025-08-26T20:52:52.978Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Starting WhatsApp MCP Server..."}
+{"level":30,"time":"2025-08-26T20:52:52.978Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing database..."}
+{"level":30,"time":"2025-08-26T20:52:52.996Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Database initialized successfully."}
+{"level":30,"time":"2025-08-26T20:52:52.996Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Attempting to connect to WhatsApp..."}
+{"level":30,"time":"2025-08-26T20:52:53.254Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"WhatsApp connection process initiated."}
+{"level":30,"time":"2025-08-26T20:52:53.254Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Starting MCP server..."}
+{"level":30,"time":"2025-08-26T20:52:53.254Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing MCP server..."}
+{"level":30,"time":"2025-08-26T20:52:53.257Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"MCP server configured. Connecting stdio transport..."}
+{"level":30,"time":"2025-08-26T20:52:53.258Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"MCP transport connected. Server is ready and listening via stdio."}
+{"level":30,"time":"2025-08-26T20:52:53.258Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server setup complete. Waiting for requests from client..."}
+{"level":30,"time":"2025-08-26T20:52:53.258Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server started and listening."}
+{"level":30,"time":"2025-08-26T20:52:53.258Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"Application setup complete. Running..."}
+{"level":30,"time":"2025-08-26T20:52:59.592Z","pid":14856,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing search_contacts with query: \"Binu\""}
+{"level":30,"time":"2025-08-26T20:56:00.119Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Starting WhatsApp MCP Server..."}
+{"level":30,"time":"2025-08-26T20:56:00.120Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing database..."}
+{"level":30,"time":"2025-08-26T20:56:00.136Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Database initialized successfully."}
+{"level":30,"time":"2025-08-26T20:56:00.136Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Attempting to connect to WhatsApp..."}
+{"level":30,"time":"2025-08-26T20:56:00.534Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"WhatsApp connection process initiated."}
+{"level":30,"time":"2025-08-26T20:56:00.534Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Starting MCP server..."}
+{"level":30,"time":"2025-08-26T20:56:00.536Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing MCP server..."}
+{"level":30,"time":"2025-08-26T20:56:00.540Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"MCP server configured. Connecting stdio transport..."}
+{"level":30,"time":"2025-08-26T20:56:00.541Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"MCP transport connected. Server is ready and listening via stdio."}
+{"level":30,"time":"2025-08-26T20:56:00.541Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server setup complete. Waiting for requests from client..."}
+{"level":30,"time":"2025-08-26T20:56:00.541Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server started and listening."}
+{"level":30,"time":"2025-08-26T20:56:00.541Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"Application setup complete. Running..."}
+{"level":30,"time":"2025-08-26T20:56:16.325Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing search_contacts with query: \"Binu\""}
+{"level":30,"time":"2025-08-26T20:56:38.454Z","pid":15925,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing list_chats: limit=10, page=0, sort=last_active, query=undefined, lastMsg=true"}
+{"level":30,"time":"2025-08-26T21:04:40.086Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Starting WhatsApp MCP Server..."}
+{"level":30,"time":"2025-08-26T21:04:40.087Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing database..."}
+{"level":30,"time":"2025-08-26T21:04:40.140Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Database initialized successfully."}
+{"level":30,"time":"2025-08-26T21:04:40.140Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Attempting to connect to WhatsApp..."}
+{"level":30,"time":"2025-08-26T21:04:41.244Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"WhatsApp connection process initiated."}
+{"level":30,"time":"2025-08-26T21:04:41.244Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Starting MCP server..."}
+{"level":30,"time":"2025-08-26T21:04:41.245Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing MCP server..."}
+{"level":30,"time":"2025-08-26T21:04:41.253Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"MCP server configured. Connecting stdio transport..."}
+{"level":30,"time":"2025-08-26T21:04:41.254Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"MCP transport connected. Server is ready and listening via stdio."}
+{"level":30,"time":"2025-08-26T21:04:41.254Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server setup complete. Waiting for requests from client..."}
+{"level":30,"time":"2025-08-26T21:04:41.254Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server started and listening."}
+{"level":30,"time":"2025-08-26T21:04:41.254Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Application setup complete. Running..."}
+{"level":30,"time":"2025-08-26T21:05:06.802Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing search_contacts with query: \"Binu\""}
+{"level":30,"time":"2025-08-26T21:06:39.020Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing send_message to 16783570553@s.whatsapp.net"}
+{"level":30,"time":"2025-08-26T21:07:22.908Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing search_contacts with query: \"Winnie\""}
+{"level":30,"time":"2025-08-26T21:07:39.098Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing list_chats: limit=10, page=0, sort=last_active, query=undefined, lastMsg=true"}
+{"level":30,"time":"2025-08-26T21:08:21.377Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing get_chat for 16783570553@s.whatsapp.net, lastMsg=true"}
+{"level":30,"time":"2025-08-26T21:09:06.265Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing list_messages for chat 447424242163@s.whatsapp.net, limit=20, page=0"}
+{"level":30,"time":"2025-08-26T21:09:43.540Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing search_messages in chat 447424242163@s.whatsapp.net, query=\"Tax\", limit=10, page=0"}
+{"level":30,"time":"2025-08-26T21:10:19.995Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Tool] Executing get_message_context for msg 37091346455E260AFE4BCF7DA8789B3E, before=5, after=5"}
+{"level":30,"time":"2025-08-26T21:10:30.063Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"[MCP Resource] Request for schema://whatsapp/main"}
+{"level":30,"time":"2025-08-26T21:11:24.675Z","pid":20370,"hostname":"AMAC02CV6B6MD6R","msg":"Received SIGTERM. Shutting down gracefully..."}
+{"level":30,"time":"2025-08-26T21:47:53.300Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Starting WhatsApp MCP Server..."}
+{"level":30,"time":"2025-08-26T21:47:53.300Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing database..."}
+{"level":30,"time":"2025-08-26T21:47:53.324Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Database initialized successfully."}
+{"level":30,"time":"2025-08-26T21:47:53.324Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Attempting to connect to WhatsApp..."}
+{"level":30,"time":"2025-08-26T21:47:53.750Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"WhatsApp connection process initiated."}
+{"level":30,"time":"2025-08-26T21:47:53.750Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Starting MCP server..."}
+{"level":30,"time":"2025-08-26T21:47:53.750Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Initializing MCP server..."}
+{"level":30,"time":"2025-08-26T21:47:53.752Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"MCP server configured. Connecting stdio transport..."}
+{"level":30,"time":"2025-08-26T21:47:53.753Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"MCP transport connected. Server is ready and listening via stdio."}
+{"level":30,"time":"2025-08-26T21:47:53.753Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server setup complete. Waiting for requests from client..."}
+{"level":30,"time":"2025-08-26T21:47:53.753Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"MCP Server started and listening."}
+{"level":30,"time":"2025-08-26T21:47:53.753Z","pid":54205,"hostname":"AMAC02CV6B6MD6R","msg":"Application setup complete. Running..."}
